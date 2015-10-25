@@ -59,3 +59,30 @@ exports.testnet = {
   ],
   defaultClientPort: 18333
 };
+
+exports.dogecoin = {
+  name: 'dogecoin',
+  magic: hex('c0c0c0c0'),
+  addressVersion: 0x1E,
+  privKeyVersion: 128,
+  P2SHVersion: 22,
+  hkeyPublicVersion: 0x0488c42e,
+  hkeyPrivateVersion: 0x0488e1f4,
+  genesisBlock: {
+    height: 0,
+    nonce: 99943,
+    version: 1,
+    hash: hex('1a91e3dace36e2be3bf030a65679fe821aa1d6ef92e7c9902eb318182c355691'),
+    prev_hash: buffertools.fill(new Buffer(32), 0),
+    timestamp: 1386325540,
+    merkle_root: hex('5b2a3f53f605d62c53e62932dac6925e3d74afa5a4b459745c36d42d0ed26a69'),
+    bits: 0x1e0ffff0
+  },
+  dnsSeeds: [
+    'seed.dogecoin.com',
+    'seed.multidoge.org',
+    'seed2.multidoge.org',
+    'seed.doger.dogecoin.com'
+  ],
+  defaultClientPort: 22556
+};
